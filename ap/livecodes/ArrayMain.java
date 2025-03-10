@@ -1,3 +1,5 @@
+package ap.livecodes;
+
 public class ArrayMain {
 
     public static void main(String[] args) {

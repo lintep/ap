@@ -1,3 +1,5 @@
+package ap.livecodes;
+
 import java.util.Scanner;
 
 public class Main {
