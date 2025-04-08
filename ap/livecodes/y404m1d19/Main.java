@@ -10,39 +10,56 @@ public class Main {
 
     public static void main(String[] args) throws FileNotFoundException {
 
-        Random random = new Random();
-
         int size=10;
         int[][] matrix = new int[size][size];
 
-        //fill random
-        for (int i = 0; i < size; i++) {
-            for (int j = 0; j < size; j++) {
-                matrix[i][j]=random.nextInt(100);
-            }
-        }
+        fillRandom(matrix);
 
-        //print
-        for (int i = 0; i < size; i++) {
-            for (int j = 0; j < size; j++) {
+        printMatrix(matrix);
+
+        String fileName="matrix.txt";
+        writeToFile(matrix,fileName);
+
+        int sizeInFile=size;
+        int[][] matrixLoadFromFile=loadFromFile(fileName,sizeInFile);
+        System.out.println("_____________________");
+
+        printMatrix(matrixLoadFromFile);
+    }
+
+    private static void printMatrix(int[][] matrix) {
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix.length; j++) {
                 System.out.print(matrix[i][j]+"\t");
             }
             System.out.println();
         }
+    }
 
-        String fileName="matrix.txt";
-        //write to file
+
+    private static void fillRandom(int[][] matrix) {
+        Random random = new Random();
+
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix.length; j++) {
+                matrix[i][j]=random.nextInt(100);
+            }
+        }
+    }
+
+    private static void writeToFile(int[][] matrix, String fileName) throws FileNotFoundException {
         PrintWriter matrixPrintWriter = new PrintWriter(fileName);
-        for (int i = 0; i < size; i++) {
-            for (int j = 0; j < size; j++) {
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix.length; j++) {
                 matrixPrintWriter.print(matrix[i][j]+"\t");
             }
             matrixPrintWriter.println();
         }
         matrixPrintWriter.close();
+    }
 
 
-        int sizeInFile=size;
+    private static int[][] loadFromFile(String fileName, int sizeInFile) throws FileNotFoundException {
         int[][] matrixLoadFromFile = new int[sizeInFile][sizeInFile];
 
         Scanner scanner = new Scanner(new File(fileName));
@@ -56,17 +73,6 @@ public class Main {
             i++;
         }
         scanner.close();
-
-        System.out.println("_____________________");
-
-        //print
-        for (i = 0; i < sizeInFile; i++) {
-            for (int j = 0; j < sizeInFile; j++) {
-                System.out.print(matrixLoadFromFile[i][j]+"\t");
-            }
-            System.out.println();
-        }
+        return matrixLoadFromFile;
     }
-
-
 }
