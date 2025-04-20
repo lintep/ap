@@ -29,8 +29,8 @@ public class ArrayMain {
         System.out.println("maxValue:" + maxValue(new int[]{1,2}));
 
 
-        int[] array2=new int[0];
-        System.out.println("maxValue:" + maxValue(array2));
+//        int[] array2=new int[0];
+//        System.out.println("maxValue:" + maxValue(array2));
 
     }
 

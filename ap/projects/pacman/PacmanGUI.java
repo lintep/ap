@@ -4,6 +4,9 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
 import java.util.Random;
 
 public class PacmanGUI extends JFrame implements KeyListener {
@@ -108,7 +111,16 @@ public class PacmanGUI extends JFrame implements KeyListener {
         else
             direction = -1;
 
-        System.out.println("direction:" + direction + "    <- e.getKeyCode()=" + e.getKeyCode());
+        try {
+            PrintWriter printWriter = new PrintWriter(new File("C:\\Users\\User-Kara-Laptop\\Desktop\\znu/ap/ap.log"));
+            printWriter.println("direction:" + direction + "    <- e.getKeyCode()=" + e.getKeyCode());
+            printWriter.flush();
+            printWriter.close();
+        } catch (FileNotFoundException ex) {
+            throw new RuntimeException(ex);
+        }
+
+//        System.out.println("direction:" + direction + "    <- e.getKeyCode()=" + e.getKeyCode());
 
         repaint();
     }
