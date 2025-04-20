@@ -10,13 +10,16 @@ import java.io.PrintWriter;
 import java.util.Random;
 
 public class PacmanGUI extends JFrame implements KeyListener {
+
+    PrintWriter printWriter = new PrintWriter(new File("C:\\Users\\User-Kara-Laptop\\Desktop\\znu/ap/ap.log"));
+
     Point pacmanPoint = new Point();
     final int width = 300, height = 300, boxSize = 5;
     static int direction = 1;
     final int LEFT = 1, RIGHT = 2, TOP = 3, BOTTOM = 4;
     Point dotPoint = new Point();
 
-    public PacmanGUI() {
+    public PacmanGUI() throws FileNotFoundException {
         addKeyListener(this);
         pacmanPoint.setLocation((width / boxSize) / 2, (height / boxSize) / 2);
         getNewDotPointLocation();
@@ -111,14 +114,9 @@ public class PacmanGUI extends JFrame implements KeyListener {
         else
             direction = -1;
 
-        try {
-            PrintWriter printWriter = new PrintWriter(new File("C:\\Users\\User-Kara-Laptop\\Desktop\\znu/ap/ap.log"));
-            printWriter.println("direction:" + direction + "    <- e.getKeyCode()=" + e.getKeyCode());
-            printWriter.flush();
-            printWriter.close();
-        } catch (FileNotFoundException ex) {
-            throw new RuntimeException(ex);
-        }
+        printWriter.println("direction:" + direction + "    <- e.getKeyCode()=" + e.getKeyCode());
+        printWriter.flush();
+
 
 //        System.out.println("direction:" + direction + "    <- e.getKeyCode()=" + e.getKeyCode());
 
@@ -134,7 +132,7 @@ public class PacmanGUI extends JFrame implements KeyListener {
     }
 
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws FileNotFoundException {
         PacmanGUI frame = new PacmanGUI();
         frame.setVisible(true);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

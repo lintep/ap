@@ -8,9 +8,11 @@ import java.util.Scanner;
 
 public class MyMatrix {
     private int[][] matrix;
+    private String appName;
 
-    public MyMatrix(int size) {
+    public MyMatrix(int size, String appName) {
         matrix = new int[size][size];
+        this.appName=appName;
     }
 
     public void printMatrix() {
@@ -34,6 +36,7 @@ public class MyMatrix {
 
     public void writeToFile(String fileName) throws FileNotFoundException {
         PrintWriter matrixPrintWriter = new PrintWriter(fileName);
+        matrixPrintWriter.println(appName);
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix.length; j++) {
                 matrixPrintWriter.print(matrix[i][j]+"\t");
