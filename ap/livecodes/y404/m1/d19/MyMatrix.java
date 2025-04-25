@@ -1,4 +1,4 @@
-package ap.livecodes.y404m1d19;
+package ap.livecodes.y404.m1.d19;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -53,9 +53,14 @@ public class MyMatrix {
         int i = 0;
         while (scanner.hasNext()){
             String line = scanner.nextLine();
-            String[] split = line.split("\t");
-            for (int j = 0; j < sizeInFile; j++) {
-                matrixLoadFromFile[i][j] = Integer.parseInt(split[j]);
+            if (i==0){
+                this.appName=line;
+            }
+            else {
+                String[] split = line.split("\t");
+                for (int j = 0; j < sizeInFile; j++) {
+                    matrixLoadFromFile[i][j] = Integer.parseInt(split[j]);
+                }
             }
             i++;
         }
