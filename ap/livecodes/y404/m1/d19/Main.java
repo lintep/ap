@@ -1,4 +1,4 @@
-package ap.livecodes.y404m1d19;
+package ap.livecodes.y404.m1.d19;
 
 import java.io.FileNotFoundException;
 

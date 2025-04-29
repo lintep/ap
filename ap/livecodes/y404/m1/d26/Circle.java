@@ -5,6 +5,19 @@ public class Circle extends Shape{
     private final double P = 3.14;
 
     public Circle(int r) {
+//        super();
+        System.out.println("create circle.");
+//        for (int i = 0; i < 10; i++) {
+//            System.out.println(r);
+////            System.out.println(super.y);
+//            System.out.println(y);
+//        }
+        this.r=r;
+    }
+
+    public Circle(int x, int y, int r) {
+        super(x,y);
+        System.out.println("Create circle.");
         this.r=r;
     }
 

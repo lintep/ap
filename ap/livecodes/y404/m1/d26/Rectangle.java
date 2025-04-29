@@ -5,8 +5,12 @@ public class Rectangle extends Shape{
     private int w=0;
     private int l=0;
 
+    public Rectangle(int w, int l){
+        this(0,0, w, l);
+    }
 
-    public Rectangle(int w, int l){// throws Exception {
+    public Rectangle(int x, int y, int w, int l){
+        super(x,y);// throws Exception {
 //        if (w<0 || l<0)
 //            throw new Exception("w<0 || l<0");
         this.w = w;

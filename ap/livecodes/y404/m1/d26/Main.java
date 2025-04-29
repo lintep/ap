@@ -17,7 +17,7 @@ public class Main {
         ArrayList<Shape> shapes= new ArrayList<>();
 
         for (int i = 0; i < 20; i++) {
-            shapes.add(new Rectangle(1+random.nextInt(100),1+ random.nextInt(100)));
+            shapes.add(new Rectangle(1,1,1+random.nextInt(100),1+ random.nextInt(100)));
         }
 
 
@@ -38,7 +38,7 @@ public class Main {
         ArrayList<Rectangle> rectangles= new ArrayList<>();
 
         for (int i = 0; i < 20; i++) {
-            rectangles.add(new Rectangle(1+random.nextInt(100),1+ random.nextInt(100)));
+            rectangles.add(new Rectangle(1,1,1+random.nextInt(100),1+ random.nextInt(100)));
         }
 
         ArrayList<Circle> circles= new ArrayList<>();
@@ -66,8 +66,8 @@ public class Main {
     }
 
     public static void main1(String[] args) {
-        Rectangle rectangle1=new Rectangle(10,12);
-        Rectangle rectangle2=new Rectangle(2,3);
+        Rectangle rectangle1=new Rectangle(1,1,10,12);
+        Rectangle rectangle2=new Rectangle(1,1,2,3);
         Circle circle1 = new Circle(4);
         Circle circle2 = new Circle(5);
 
