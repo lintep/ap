@@ -1,6 +1,6 @@
 package ap.livecodes;
 
-public class Student {
+public class Student implements Comparable<Student>{
 
     private String firstName;
     private String lastName;
@@ -34,5 +34,31 @@ public class Student {
 
     public String getAddress() {
         return address;
+    }
+
+    @Override
+    public String toString() {
+        return "{'firstName':'"+this.firstName+"' ," +
+                "'lastName':'"+this.lastName+"' ," +
+                "'address':'"+this.address+"' }";
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        Student inputStudent = (Student) obj;
+        return this.address.equals(inputStudent.address) &&
+               this.firstName.equals(inputStudent.firstName) &&
+               this.lastName.equals(inputStudent.lastName);
+    }
+
+    @Override
+    public int compareTo(Student o) {
+        if(this.lastName.compareTo(o.lastName)!=0)
+            return this.lastName.compareTo(o.lastName);
+        else if (this.firstName.compareTo(o.firstName)!=0) {
+            return this.firstName.compareTo(o.firstName);
+        }
+        else
+            return this.address.compareTo(o.address);
     }
 }
