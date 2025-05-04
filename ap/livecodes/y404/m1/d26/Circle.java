@@ -33,4 +33,10 @@ public class Circle extends Shape{
 //        return r;
         return this.r;
     }
+
+    @Override
+    public String toString() {
+//        return super.toString();
+        return "{r:"+this.r+"}";
+    }
 }

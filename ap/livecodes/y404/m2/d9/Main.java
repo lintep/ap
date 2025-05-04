@@ -9,7 +9,17 @@ public class Main {
     public static void main(String[] args) {
 
         ShapeManager shapeManager = new ShapeManager();
-        shapeManager.add(new Circle(2));
+
+        System.out.println(shapeManager);
+        System.out.println(shapeManager.toString());
+
+        Circle c=new Circle(2);
+        System.out.println(c);
+        Shape sh = c;
+        shapeManager.add(sh);
+//        shapeManager.add(new Circle(2));
+
+
         shapeManager.add(new Rectangle(2,4));
         shapeManager.add(new Rectangle(6,9));
         shapeManager.add(new Circle(9));
@@ -17,8 +27,8 @@ public class Main {
         System.out.println(shapeManager.getTotalArea());
         System.out.println(shapeManager.getShapeCount());
 
-//        ShapeType shapeType = ShapeType.Circle;
-//        System.out.println(shapeManager.getShapeCount(shapeType));
+        ShapeType shapeType = ShapeType.CIRCLE;
+        System.out.println(shapeManager.getShapeCount(shapeType));
 
     }
 }
