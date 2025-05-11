@@ -22,4 +22,11 @@ public class Pen {
     public int getPrice() {
         return price;
     }
+
+    public void printInfo() {
+        System.out.println(
+                "brand="+getBrand()+"\t" +
+                        "color="+getColor()+"\t" +
+                        "price="+getPrice());
+    }
 }

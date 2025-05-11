@@ -17,4 +17,10 @@ public class Book {
     public int getPrice() {
         return price;
     }
+
+    public void printInfo() {
+        System.out.println(
+                "name="+this.name+"\t" +
+                        "price="+this.price);
+    }
 }

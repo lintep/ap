@@ -16,16 +16,11 @@ public class Main {
         books.add(new Book("book3",580000));
 
         for (Pen pen : pens) {
-            System.out.println(
-                    "brand="+pen.getBrand()+"\t" +
-                    "color="+pen.getColor()+"\t" +
-                    "price="+pen.getPrice());
+            pen.printInfo();
         }
 
         for (int i=0; i<books.size(); i++) {
-            System.out.println(
-                    "name="+books.get(i).getName()+"\t" +
-                    "price="+books.get(i).getPrice());
+            books.get(i).printInfo();
         }
     }
 
