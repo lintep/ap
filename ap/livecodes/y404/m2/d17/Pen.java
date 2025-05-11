@@ -1,14 +1,13 @@
 package ap.livecodes.y404.m2.d17;
 
-public class Pen {
+public class Pen extends Product{
     private String brand;
     private String color;
-    private int price;
 
     public Pen(String brand, String color, int price) {
+        super(price);
         this.brand = brand;
         this.color = color;
-        this.price = price;
     }
 
     public String getBrand() {
@@ -35,7 +34,7 @@ public class Pen {
         return "Pen{" +
                 "brand='" + brand + '\'' +
                 ", color='" + color + '\'' +
-                ", price=" + price +
+                ", price=" + super.price +
                 '}';
     }
 }

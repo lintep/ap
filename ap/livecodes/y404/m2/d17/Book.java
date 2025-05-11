@@ -1,13 +1,12 @@
 package ap.livecodes.y404.m2.d17;
 
-public class Book {
+public class Book extends Product{
 
     private String name;
-    private int price;
 
     public Book(String name, int price) {
+        super(price);
         this.name = name;
-        this.price = price;
     }
 
     public String getName() {
