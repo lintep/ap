@@ -17,6 +17,7 @@ public class Book extends Product{
         return price;
     }
 
+    @Override
     public void printInfo() {
         System.out.println(
                 "name="+this.name+"\t" +

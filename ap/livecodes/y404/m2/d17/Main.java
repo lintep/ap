@@ -1,6 +1,9 @@
 package ap.livecodes.y404.m2.d17;
 
+import ap.livecodes.Student;
+
 import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
 
@@ -24,6 +27,41 @@ public class Main {
 //            books.get(i).printInfo();
             System.out.println(books.get(i));
         }
+
+        List<Product> products = new ArrayList<>();
+        products.addAll(pens);
+        products.addAll(books);
+        for (Product product : products) {
+//            System.out.println(product);
+            product.printInfo();
+        }
+
+        ArrayList<PrintInfoInterface> printInfoList=new ArrayList<>();
+        printInfoList.add(pens.get(0));
+        printInfoList.add(books.get(0));
+        printInfoList.add(products.get(3));
+        printInfoList.add(new Student("ali","ahmadi","zanjan"));
+
+
+        for (PrintInfoInterface printInfoItem : printInfoList) {
+            printInfoItem.printInfo();
+        }
+
+//        new PrintInfoInterface() {
+//            @Override
+//            public void printInfo() {
+//
+//            }
+//        };
+
+//        Book book1 = new Book("name1", 11111){
+//            @Override
+//            public String toString() {
+//                return "BOOK[Name="+getName()+",Price:"+price+"]";
+//            }
+//        };
+//
+//        System.out.println(book1);
     }
 
 }

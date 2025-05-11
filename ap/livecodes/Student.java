@@ -1,6 +1,8 @@
 package ap.livecodes;
 
-public class Student implements Comparable<Student>{
+import ap.livecodes.y404.m2.d17.PrintInfoInterface;
+
+public class Student implements Comparable<Student>, PrintInfoInterface {
 
     private String firstName;
     private String lastName;
@@ -60,5 +62,10 @@ public class Student implements Comparable<Student>{
         }
         else
             return this.address.compareTo(o.address);
+    }
+
+    @Override
+    public void printInfo() {
+        System.out.println("JSON:\t"+this);
     }
 }

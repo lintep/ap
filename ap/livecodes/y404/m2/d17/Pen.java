@@ -22,6 +22,7 @@ public class Pen extends Product{
         return price;
     }
 
+    @Override
     public void printInfo() {
         System.out.println(
                 "brand="+getBrand()+"\t" +
