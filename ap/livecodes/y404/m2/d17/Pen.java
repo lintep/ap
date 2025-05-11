@@ -29,4 +29,13 @@ public class Pen {
                         "color="+getColor()+"\t" +
                         "price="+getPrice());
     }
+
+    @Override
+    public String toString() {
+        return "Pen{" +
+                "brand='" + brand + '\'' +
+                ", color='" + color + '\'' +
+                ", price=" + price +
+                '}';
+    }
 }

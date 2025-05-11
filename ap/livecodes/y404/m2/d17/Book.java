@@ -23,4 +23,12 @@ public class Book {
                 "name="+this.name+"\t" +
                         "price="+this.price);
     }
+
+    @Override
+    public String toString() {
+        return "Book{" +
+                "name='" + name + '\'' +
+                ", price=" + price +
+                '}';
+    }
 }

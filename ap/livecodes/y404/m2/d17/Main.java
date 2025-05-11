@@ -16,11 +16,13 @@ public class Main {
         books.add(new Book("book3",580000));
 
         for (Pen pen : pens) {
-            pen.printInfo();
+//            pen.printInfo();
+            System.out.println(pen);
         }
 
         for (int i=0; i<books.size(); i++) {
-            books.get(i).printInfo();
+//            books.get(i).printInfo();
+            System.out.println(books.get(i));
         }
     }
 
