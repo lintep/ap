@@ -2,10 +2,7 @@ package ap.livecodes.y404.m2.d23;
 
 import ap.livecodes.Student;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 
 public class Main {
 
@@ -30,5 +27,22 @@ public class Main {
             sh.printInfo();
         }
 
+        System.out.println("_________________");
+        MyClass<String> myClassString = new MyClass<String>("salam");
+        MyClass<Integer> myClassInteger = new MyClass<Integer>(123);
+        System.out.println(myClassString);
+        System.out.println(myClassInteger);
+//        MyClass<Student> myClassStudent = new MyClass<Student>(new Student("q","b","c"));
+//        System.out.println(myClassStudent);
+        ArrayList<Student> students=new ArrayList<>();
+        students.add(new Student("ali","ahmadi","zanjan"));
+        students.add(new Student("ali2","ahmadi","zanjan"));
+        students.add(new Student("ali3","ahmadi","zanjan"));
+
+        HashMap<Integer,Student> hashMap=new HashMap<>();
+        for (Student student : students) {
+            hashMap.put(student.getId(),student);
+        }
+        System.out.println(hashMap.size());
     }
 }

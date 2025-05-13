@@ -22,7 +22,7 @@ public class Main {
         Student student2 = new Student("ali","ahmadi","zanjan");
         System.out.println(student1==student2);
         System.out.println(student1.equals(student2));
-        System.out.println(student1.compareTo(student2));
+//        System.out.println(student1.compareTo(student2));
 
         Shape shape = new Shape();
         Shape shape2 = new Circle(3);
