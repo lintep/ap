@@ -40,6 +40,7 @@ public class Main {
         students.add(new Student("ali3","ahmadi","zanjan"));
 
         HashMap<Integer,Student> hashMap=new HashMap<>();
+//        new Object().h
         for (Student student : students) {
             hashMap.put(student.getId(),student);
         }
