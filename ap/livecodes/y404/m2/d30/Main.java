@@ -1,7 +1,8 @@
 package ap.livecodes.y404.m2.d30;
 
+import ap.livecodes.y404.m3.d3.FileManager;
+
 import java.io.IOException;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.*;
 
@@ -15,6 +16,7 @@ public class Main {
         Scanner in = new Scanner(pageLocation.openStream());
 
         List<String> lines=new ArrayList<>();
+        FileManager fileManager = new FileManager("C:\\znu.ac.ir/1.html");
 
         ArrayList<String> hrefList=new ArrayList<>();
         while (in.hasNext()){
@@ -33,8 +35,6 @@ public class Main {
 
         }
         in.close();
-        FileManager.save(lines,"C:\\znu.ac.ir/1.html");
-        FileManager.save(lines,"C:\\znu.ac.ir/2.html");
-        Queue<String> queue=new LinkedList<>();
+        fileManager.save(lines);
     }
 }
