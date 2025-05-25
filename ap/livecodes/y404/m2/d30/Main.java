@@ -3,10 +3,7 @@ package ap.livecodes.y404.m2.d30;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.Queue;
-import java.util.Scanner;
+import java.util.*;
 
 public class Main {
 
@@ -17,9 +14,12 @@ public class Main {
         URL pageLocation = new URL(address);
         Scanner in = new Scanner(pageLocation.openStream());
 
+        List<String> lines=new ArrayList<>();
+
         ArrayList<String> hrefList=new ArrayList<>();
         while (in.hasNext()){
             String line=in.next();
+            lines.add(line);
             int startIndex = line.indexOf("href=\"");
             if (startIndex>=0){
                 try {
@@ -33,6 +33,8 @@ public class Main {
 
         }
         in.close();
+        FileManager.save(lines,"C:\\znu.ac.ir/1.html");
+        FileManager.save(lines,"C:\\znu.ac.ir/2.html");
         Queue<String> queue=new LinkedList<>();
     }
 }
