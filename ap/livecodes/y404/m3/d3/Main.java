@@ -23,7 +23,9 @@ public class Main {
 
         Queue<String> queue = new LinkedList<>();
         Set<String> urls = geturls(filePath);
-        for (String url : urls) {
+        queue.addAll(urls);
+        while (!queue.isEmpty()){
+            String url = queue.remove();
             counter++;
             filePath="C:\\znu.ac.ir/"+counter+".html";
             try {
