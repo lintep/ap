@@ -10,10 +10,10 @@ import java.util.stream.Collectors;
 public class Main {
 
     public static void main(String[] args) throws IOException {
-//        String urlAddress = "https://www.znu.ac.ir";
+        String urlAddress = "https://www.znu.ac.ir";
         int counter=1;
         String filePath="C:\\znu.ac.ir/"+counter+".html";
-//        fetch(urlAddress,filePath);
+        fetchAndSave(urlAddress,filePath);
 
 //        Stream<String> fileLines = Files.lines(Path.of(filePath));
 //        Files.lines(Path.of(filePath)).map(s -> s.length());
