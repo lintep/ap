@@ -1,6 +1,6 @@
 package ap.livecodes.y404.m2.d14;
 
-import ap.livecodes.Student;
+import ap.livecodes.y403.m12.d19.Student;
 import ap.livecodes.y404.m1.d26.Circle;
 import ap.livecodes.y404.m1.d26.Shape;
 

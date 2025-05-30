@@ -1,4 +1,4 @@
-package ap.livecodes;
+package ap.livecodes.y403.m12.d7;
 
 import java.util.Scanner;
 
