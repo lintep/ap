@@ -1,6 +1,6 @@
 package ap.projects.scraper;
 
-import ap.projects.scraper.fetcher.Fetcher;
+import ap.projects.scraper.fetcher.HtmlFetcher;
 import ap.projects.scraper.parser.HtmlParser;
 import ap.projects.scraper.store.HtmlFileManager;
 
@@ -20,7 +20,7 @@ public class DomainHtmlScraper {
     }
 
     public void start() throws IOException {
-        List<String> htmlLines = Fetcher.fetchHtml(domainAddress);
+        List<String> htmlLines = HtmlFetcher.fetchHtml(domainAddress);
         this.htmlFileManager.save(htmlLines);
 
         List<String> urls = HtmlParser.getAllUrlsFromList(htmlLines);
@@ -31,7 +31,7 @@ public class DomainHtmlScraper {
             String url = queue.remove();
             counter++;
             try {
-                htmlLines = Fetcher.fetchHtml(domainAddress);
+                htmlLines = HtmlFetcher.fetchHtml(domainAddress);
                 this.htmlFileManager.save(htmlLines);
 
                 urls = HtmlParser.getAllUrlsFromList(htmlLines);

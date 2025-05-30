@@ -6,8 +6,8 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
 
-        String domainAddress = "https://znu.ac.ir";
-        String savePath = "fetched_znu.ac.ir";
+        String domainAddress = Conf.DOMAIN_ADDRESS;
+        String savePath = Conf.SAVE_DIRECTORY;
 
         DomainHtmlScraper domainHtmlScraper = new DomainHtmlScraper(domainAddress,savePath);
 
