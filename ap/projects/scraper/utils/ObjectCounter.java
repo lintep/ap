@@ -1,4 +1,4 @@
-package ap.projects.scraper;
+package ap.projects.scraper.utils;
 
 import java.util.HashMap;
 import java.util.List;

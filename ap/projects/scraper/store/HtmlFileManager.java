@@ -1,8 +1,8 @@
-package ap.projects.scraper;
+package ap.projects.scraper.store;
 
-import java.io.FileNotFoundException;
+import ap.projects.scraper.utils.DirectoryTools;
+
 import java.io.PrintWriter;
-import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 public class HtmlFileManager {

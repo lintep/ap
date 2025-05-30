@@ -1,4 +1,4 @@
-package ap.projects.scraper;
+package ap.projects.scraper.parser;
 
 import java.io.IOException;
 import java.nio.file.Files;

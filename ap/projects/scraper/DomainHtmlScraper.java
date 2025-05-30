@@ -1,5 +1,9 @@
 package ap.projects.scraper;
 
+import ap.projects.scraper.fetcher.Fetcher;
+import ap.projects.scraper.parser.HtmlParser;
+import ap.projects.scraper.store.HtmlFileManager;
+
 import java.io.IOException;
 import java.util.*;
 

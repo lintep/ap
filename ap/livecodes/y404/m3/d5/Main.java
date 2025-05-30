@@ -1,6 +1,6 @@
 package ap.livecodes.y404.m3.d5;
 
-import ap.projects.scraper.HtmlParser;
+import ap.projects.scraper.parser.HtmlParser;
 
 import java.io.IOException;
 import java.nio.file.Files;

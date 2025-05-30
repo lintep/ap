@@ -1,4 +1,4 @@
-package ap.projects.scraper;
+package ap.projects.scraper.fetcher;
 
 import ap.livecodes.y404.m3.d3.FileManager;
 

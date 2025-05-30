@@ -1,10 +1,12 @@
-package ap.projects.scraper;
+package ap.projects.scraper.abalyzer;
 
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
+import ap.projects.scraper.Conf;
+import ap.projects.scraper.parser.HtmlParser;
+import ap.projects.scraper.utils.DirectoryTools;
+import ap.projects.scraper.utils.FileTools;
+import ap.projects.scraper.utils.ObjectCounter;
+
 import java.util.Comparator;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;

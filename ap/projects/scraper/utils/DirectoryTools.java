@@ -1,4 +1,4 @@
-package ap.projects.scraper;
+package ap.projects.scraper.utils;
 
 import java.io.File;
 import java.io.IOException;
