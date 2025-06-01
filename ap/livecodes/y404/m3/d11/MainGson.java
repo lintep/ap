@@ -2,7 +2,7 @@ package ap.livecodes.y404.m3.d11;
 
 import com.google.gson.Gson;
 
-public class Main {
+public class MainGson {
 
     public static void main(String[] args) {
 
