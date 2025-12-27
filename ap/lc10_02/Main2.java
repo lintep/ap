@@ -1,4 +1,4 @@
-package ap.lc010_02;
+package ap.lc10_02;
 
 import java.util.Scanner;
 
@@ -7,8 +7,17 @@ public class Main2 {
     public static void main(String[] args) {
 
 //        ArrayManager arrayManager = new ArrayManager(100);
-        ap.lc010_02.ArrayListManager arrayManager = new ap.lc010_02.ArrayListManager(10);
+//        ArrayListManager arrayManager = new ArrayListManager(10);
 
+//        ParentArrayManager arrayManager = new ArrayManager(10);
+//        ParentArrayManager arrayManager = new ArrayListManager(10);
+        ParentArrayManager arrayManager = new ParentArrayManager();
+
+        //call parent method
+        arrayManager.printCreateDate();
+
+        //call child method
+        System.out.println(arrayManager.toString());
         System.out.println(arrayManager);
         arrayManager.print();
 

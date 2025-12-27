@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Random;
 
-public class ArrayListManager {
+public class ArrayListManager extends ParentArrayManager{
 
     private ArrayList<Integer> list;
 
@@ -19,6 +19,7 @@ public class ArrayListManager {
     }
 
     //    part2
+    @Override
     public void printMinWithIndex(){
         int minIndex=0;
         int minValue = this.list.get(minIndex);
@@ -34,6 +35,7 @@ public class ArrayListManager {
     }
 
     //    part3
+    @Override
     public void printMaxWithIndex(){
         int maxIndex=0;
         int maxValue = list.get(maxIndex);
@@ -48,6 +50,7 @@ public class ArrayListManager {
         System.out.println("maxIndex: "+maxIndex+ "\tmaxValue: "+maxValue);
     }
 
+    @Override
     public void changeTwoIndexValues(int index1, int index2){
 
         int temp = list.get(index1);
@@ -55,6 +58,7 @@ public class ArrayListManager {
         list.set(index2,temp);
     }
 
+    @Override
     public void print() {
         for (int value : list) {
             System.out.print(value+" ,");
