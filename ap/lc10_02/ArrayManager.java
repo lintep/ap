@@ -1,18 +1,30 @@
 package ap.lc10_02;
 
+import java.util.Arrays;
 import java.util.Random;
 
 public class ArrayManager {
+
+    //    private int[] array=new int[size];
     private int[] array;
 
-    public ArrayManager(){
-        init();
-    }
+//    public ArrayManager(){
+//        init();
+//    }
+//
+////    part1
+//    private void init(){
+//        Random random = new Random();
+//        this.array=new int[5];
+//        for (int i = 0; i < this.array.length; i++) {
+//            this.array[i]=random.nextInt(1000);
+//        }
+//    }
 
     //    part1
-    private void init(){
+    public ArrayManager(int size){
         Random random = new Random();
-        this.array=new int[5];
+        this.array=new int[size];
         for (int i = 0; i < this.array.length; i++) {
             this.array[i]=random.nextInt(1000);
         }
@@ -60,5 +72,13 @@ public class ArrayManager {
             System.out.print(value+" ,");
         }
         System.out.println();
+    }
+
+    @Override
+    public String toString() {
+        return "ArrayManager{" +
+                "array=" + Arrays.toString(array) +
+                '}';
+//        return this.array.toString();
     }
 }

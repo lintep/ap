@@ -6,8 +6,9 @@ public class Main2 {
 
     public static void main(String[] args) {
 
-        ArrayManager arrayManager = new ArrayManager();
+        ArrayManager arrayManager = new ArrayManager(100);
 
+        System.out.println(arrayManager);
         arrayManager.print();
 
         arrayManager.printMinWithIndex();
@@ -23,6 +24,9 @@ public class Main2 {
         arrayManager.changeTwoIndexValues(index1, index2);
 
         arrayManager.print();
+        System.out.println(arrayManager.toString());
+        System.out.println(arrayManager);
+
 
     }
 }
