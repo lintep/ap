@@ -9,9 +9,9 @@ public class Main2 {
 //        ArrayManager arrayManager = new ArrayManager(100);
 //        ArrayListManager arrayManager = new ArrayListManager(10);
 
-//        ParentArrayManager arrayManager = new ArrayManager(10);
+        ParentArrayManager arrayManager = new ArrayManager(10);
 //        ParentArrayManager arrayManager = new ArrayListManager(10);
-        ParentArrayManager arrayManager = new ParentArrayManager();
+//        ParentArrayManager arrayManager = new ParentArrayManager();
 
         //call parent method
         arrayManager.printCreateDate();

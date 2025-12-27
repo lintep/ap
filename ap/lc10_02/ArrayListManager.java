@@ -72,4 +72,10 @@ public class ArrayListManager extends ParentArrayManager{
                 "list=" + list.toString() +
                 '}';
     }
+
+    @Override
+    public void printCreateDate() {
+        System.out.println("called from child "+this.getClass().getName());
+        super.printCreateDate();
+    }
 }
