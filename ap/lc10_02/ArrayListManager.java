@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Random;
 
-public class ArrayListManager extends ParentArrayManager{
+public class ArrayListManager implements ParentArrayManagerInterface{
 
     private ArrayList<Integer> list;
 
@@ -73,9 +73,9 @@ public class ArrayListManager extends ParentArrayManager{
                 '}';
     }
 
-    @Override
-    public void printCreateDate() {
-        System.out.println("called from child "+this.getClass().getName());
-        super.printCreateDate();
-    }
+//    @Override
+//    public void printCreateDate() {
+//        System.out.println("called from child "+this.getClass().getName());
+//        super.printCreateDate();
+//    }
 }
