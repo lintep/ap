@@ -1,4 +1,4 @@
-package ap.lc10_02;
+package ap.lc010_02;
 
 import java.util.Scanner;
 
@@ -6,7 +6,8 @@ public class Main2 {
 
     public static void main(String[] args) {
 
-        ArrayManager arrayManager = new ArrayManager(100);
+//        ArrayManager arrayManager = new ArrayManager(100);
+        ap.lc010_02.ArrayListManager arrayManager = new ap.lc010_02.ArrayListManager(10);
 
         System.out.println(arrayManager);
         arrayManager.print();
