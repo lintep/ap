@@ -1,12 +1,12 @@
 package ap.livecodes.y404.m3.d11.personsystem;
 
-import com.google.gson.Gson;
+import ;
 
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.sql.*;
-import java.util.ArrayList;
+import java.util.com.google.gson.GsonArrayList;
 import java.util.List;
 
 public class PersonManagerWithSqlite extends PersonManager {
