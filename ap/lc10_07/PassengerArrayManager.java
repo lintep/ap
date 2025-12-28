@@ -18,17 +18,29 @@ public class PassengerArrayManager{
     }
 
     public void printMinAgeWithIndex(){
-        int minIndex=0;
-        int minValue = this.array[minIndex].getAge();
-
-        for (int i = 1; i < this.array.length; i++) {
-            if(this.array[i].getAge()<minValue){
+        int minIndex=-1;
+        int minValue = -1;
+        for (int i = 0; i < this.array.length; i++) {
+            if(this.array[i]!=null) {
                 minIndex=i;
-                minValue=this.array[minIndex].getAge();
+                minValue = this.array[minIndex].getAge();
+                break;
             }
         }
 
-        System.out.println("minAgeIndex: "+minIndex+ "\tminAgeValue: "+minValue);
+        for (int i = minIndex+1; i < this.array.length; i++) {
+            if(this.array[i]!=null) {
+                if (this.array[i].getAge() < minValue) {
+                    minIndex = i;
+                    minValue = this.array[minIndex].getAge();
+                }
+            }
+        }
+
+        if(minIndex>=0)
+            System.out.println("minAgeIndex: "+minIndex+ "\tminAgeValue: "+minValue);
+        else
+            System.out.println("[printMinAgeWithIndex] No passenger");
     }
 
     public void printMaxAgeWithIndex(){
@@ -70,5 +82,27 @@ public class PassengerArrayManager{
                 "array=" + Arrays.toString(array) +
                 "size="+array.length +
                 '}';
+    }
+
+    public boolean add(int index, Passenger passenger) {
+        if (!isExist(passenger))
+            if (this.array[index] == null) {
+                this.array[index] = passenger;
+                return true;
+            }
+            else
+                System.out.println("index "+index+ " is filled.");
+        else
+            System.out.println(passenger+" is exist");
+
+        return false;
+    }
+
+    private boolean isExist(Passenger passenger) {
+        for (int i = 0; i < this.array.length; i++) {
+            if(array[i]!=null && array[i].getId() == passenger.getId())
+                return true;
+        }
+        return false;
     }
 }
