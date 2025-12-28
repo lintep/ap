@@ -20,5 +20,7 @@ public class Main2 {
         passengerArrayManager.add(0, passenger);
 
         System.out.println(passengerArrayManager);
+
+        System.out.println("passenger index: "+passengerArrayManager.getIndex(passenger.getId()));
     }
 }

@@ -3,6 +3,7 @@ package ap.lc10_07;
 import ap.lc10_02.ParentArrayManager;
 
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Random;
 
@@ -10,10 +11,13 @@ public class PassengerArrayManager{
 
     private Passenger[] array;
     private HashSet<Integer> passengersIdSet;
+    private HashMap<Integer,Integer> passengersIdToIndexMap;//map passengerId -> index
+
 
     public PassengerArrayManager(int size){
         this.array=new Passenger[size];
         this.passengersIdSet=new HashSet<>();
+        passengersIdToIndexMap=new HashMap<>();
     }
 
     public PassengerArrayManager(){
@@ -93,6 +97,7 @@ public class PassengerArrayManager{
             if (this.array[index] == null) {
                 this.array[index] = passenger;
                 this.passengersIdSet.add(passenger.getId());
+                passengersIdToIndexMap.put(passenger.getId(),index);
                 return true;
             }
             else
@@ -111,4 +116,16 @@ public class PassengerArrayManager{
         return false;
     }
 
+
+    public int getIndex(int passengerId) {
+//        for (int i = 0; i < this.array.length; i++) {
+//            if(array[i]!=null && array[i].getId() == passengerId)
+//                return i;
+//        }
+//        return -1;
+
+        if(passengersIdSet.contains(passengerId))
+            return this.passengersIdToIndexMap.get(passengerId);
+        return -1;
+    }
 }
