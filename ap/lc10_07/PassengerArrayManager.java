@@ -3,14 +3,17 @@ package ap.lc10_07;
 import ap.lc10_02.ParentArrayManager;
 
 import java.util.Arrays;
+import java.util.HashSet;
 import java.util.Random;
 
 public class PassengerArrayManager{
 
     private Passenger[] array;
+    private HashSet<Integer> passengersIdSet;
 
     public PassengerArrayManager(int size){
         this.array=new Passenger[size];
+        this.passengersIdSet=new HashSet<>();
     }
 
     public PassengerArrayManager(){
@@ -85,9 +88,11 @@ public class PassengerArrayManager{
     }
 
     public boolean add(int index, Passenger passenger) {
-        if (!isExist(passenger))
+//        if (!isExist(passenger))
+        if (!passengersIdSet.contains(passenger.getId()))
             if (this.array[index] == null) {
                 this.array[index] = passenger;
+                this.passengersIdSet.add(passenger.getId());
                 return true;
             }
             else
@@ -105,4 +110,5 @@ public class PassengerArrayManager{
         }
         return false;
     }
+
 }
